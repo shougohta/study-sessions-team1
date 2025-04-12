@@ -1,0 +1,5 @@
+[
+    { action: "put", key: "apple", value: 5 },
+    { action: "put", key: "banana", value: 8 },
+    { action: "put", key: "orange", value: 10 }
+]

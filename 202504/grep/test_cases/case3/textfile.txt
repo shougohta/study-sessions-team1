@@ -1,0 +1,6 @@
+test at beginning of line
+middle test in sentence
+sentence ends with test
+testconnectedtoword
+no_match_here
+another test example

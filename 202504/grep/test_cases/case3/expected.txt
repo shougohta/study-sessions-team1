@@ -1,0 +1,5 @@
+test at beginning of line
+middle test in sentence
+sentence ends with test
+testconnectedtoword
+another test example

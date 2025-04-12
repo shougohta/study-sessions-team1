@@ -1,0 +1,7 @@
+System start: OK
+Loading configuration: Done
+Error: Unable to connect to database
+Processing request: error in line 42
+error: Timeout occurred
+Connection established
+ERROR: Critical failure
