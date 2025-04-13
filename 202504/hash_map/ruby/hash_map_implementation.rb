@@ -37,6 +37,6 @@ class HashMapImplementation
   
   # 全ての要素を取得（テスト用）
   def all_entries
-    @hash.map { |key, value| { key: key, value: value } }
+    @hash.dup
   end
 end

@@ -39,7 +39,8 @@ class HashMapPerformanceMeasurement
         expected_output = {}
       end
     end
-    
+    expected_output = expected_output.transform_keys(&:to_s)
+
     return operations, expected_output
   end
   

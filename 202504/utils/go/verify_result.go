@@ -1,4 +1,10 @@
-package verify_result
+package utils
+
+import (
+	"fmt"
+	"reflect"
+)
+
 // VerifyResult は結果の正当性を検証する
 func VerifyResult(name string, result interface{}, expected interface{}) bool {
 	if reflect.DeepEqual(result, expected) {
