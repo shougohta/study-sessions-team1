@@ -24,23 +24,21 @@ class GrepPerformanceMeasurement
     
     # 期待値の読み込み
     expected_output = []
-    if File.exist?(input_data)
-      expected_output = File.readlines(input_data).map(&:chomp)
+    if File.exist?(expected_path)
+      expected_output = File.readlines(expected_path).map(&:chomp)
     end
     
     return file_path, pattern, expected_output
   end
   
   # パフォーマンス計測と正当性検証を実行
-  def run_measurement(file_path = nil, pattern = nil, expected_output = nil, iterations = 1)
+  def run_measurement(iterations = 1)
     # テストデータが指定されていない場合は読み込む
-    if file_path.nil? || pattern.nil? || expected_output.nil?
-      begin
-        file_path, pattern, expected_output = load_test_data
-      rescue => e
-        puts "テストデータの読み込みに失敗しました: #{e.message}"
-        return nil
-      end
+    begin
+      file_path, pattern, expected_output = load_test_data
+    rescue => e
+      puts "テストデータの読み込みに失敗しました: #{e.message}"
+      return nil
     end
     
     puts "Grep実装のパフォーマンス計測と正当性検証:"

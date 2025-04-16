@@ -7,6 +7,6 @@ class GrepImplementation
   # ファイルから特定のパターンを検索する
   def search(file_path, pattern)
     # ここを実装する
-    File.readlines(file_path).grep(pattern)
+    File.readlines(file_path, chomp: true).grep(Regexp.new(Regexp.escape(pattern)))
   end
 end

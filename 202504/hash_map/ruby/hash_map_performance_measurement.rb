@@ -45,15 +45,12 @@ class HashMapPerformanceMeasurement
   end
   
   # パフォーマンス計測と正当性検証を実行
-  def run_measurement(operations = nil, expected_output = nil, iterations = 1)
-    # テストデータが指定されていない場合は読み込む
-    if operations.nil? || expected_output.nil?
-      begin
-        operations, expected_output = load_test_data
-      rescue => e
-        puts "テストデータの読み込みに失敗しました: #{e.message}"
-        return nil
-      end
+  def run_measurement(iterations = 1)
+    begin
+      operations, expected_output = load_test_data
+    rescue => e
+      puts "テストデータの読み込みに失敗しました: #{e.message}"
+      return nil
     end
     
     puts "HashMap実装のパフォーマンス計測と正当性検証:"
